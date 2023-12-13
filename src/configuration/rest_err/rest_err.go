@@ -35,7 +35,7 @@ func newRestErr(message string, err string, code int, causes []Causes) *RestErr 
 //Padronizando os tipos de erros
 
 // tratando o erro de bad request
-func newBadRequestError(message string) *RestErr {
+func NewBadRequestError(message string) *RestErr {
 	return &RestErr{
 		Message: message,
 		Err:     "bad request",
@@ -54,7 +54,7 @@ func NewUnauthorizedRequestError(message string) *RestErr {
 
 // não entendi ainda muito bem como funciona, mas pelo oque eu entendi
 // ele valida o tipo de bad request adicionando o atribute causes
-func newBadRequestValidationError(message string, causes []Causes) *RestErr {
+func NewBadRequestValidationError(message string, causes []Causes) *RestErr {
 	return &RestErr{
 		Message: message,
 		Err:     "bad request",
